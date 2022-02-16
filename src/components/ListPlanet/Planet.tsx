@@ -1,6 +1,6 @@
-import React from "react";
-import PlanetUrlService from "../../services/PlanetsUrlService";
-import Loader from "../Loader";
+import React from 'react';
+import PlanetUrlService from '../../services/PlanetsUrlService';
+import Loader from '../Loader';
 import {
   StyledCardHeader,
   StyledDescriptionList,
@@ -9,7 +9,7 @@ import {
   StyledDescriptionListDescription,
   StyledCardWrapper,
   StyledCard,
-} from "./styles";
+} from './styles';
 
 export interface Props {
   url: string;
@@ -18,30 +18,27 @@ export interface Props {
 
 const Planet: React.FC<Props> = ({ url, onClose }) => {
   const service = PlanetUrlService(url);
-  
-  
 
   return (
-    <div >
+    <div>
       <div onClick={onClose} />
 
-      {service.status === "loading" && <Loader />}
+      {service.status === 'loading' && <Loader />}
 
-      {service.status === "loaded" && (
-        <>
-          <StyledCard>
-            <StyledCardWrapper>
-              <StyledCardHeader>{service.payload.name}</StyledCardHeader>
-              <StyledDescriptionList>
-                <StyledDescriptionWrapper>
-                  <StyledDescriptionListTerm>
+      {service.status === 'loaded' && (
+        <StyledCard>
+          <StyledCardWrapper>
+            <StyledCardHeader>{service.payload.name}</StyledCardHeader>
+            <StyledDescriptionList>
+              <StyledDescriptionWrapper>
+                <StyledDescriptionListTerm>
                     Diameter
                   </StyledDescriptionListTerm>
-                  <StyledDescriptionListDescription>
+                <StyledDescriptionListDescription>
                     {service.payload.diameter}
                   </StyledDescriptionListDescription>
-                </StyledDescriptionWrapper>
-                <StyledDescriptionWrapper>
+              </StyledDescriptionWrapper>
+              <StyledDescriptionWrapper>
                   <StyledDescriptionListTerm>
                     Rotation Period
                   </StyledDescriptionListTerm>
@@ -49,7 +46,7 @@ const Planet: React.FC<Props> = ({ url, onClose }) => {
                     {service.payload.rotation_period}
                   </StyledDescriptionListDescription>
                 </StyledDescriptionWrapper>
-                <StyledDescriptionWrapper>
+              <StyledDescriptionWrapper>
                   <StyledDescriptionListTerm>
                     Orbital Period
                   </StyledDescriptionListTerm>
@@ -57,13 +54,13 @@ const Planet: React.FC<Props> = ({ url, onClose }) => {
                     {service.payload.orbital_period}
                   </StyledDescriptionListDescription>
                 </StyledDescriptionWrapper>
-                <StyledDescriptionWrapper>
+              <StyledDescriptionWrapper>
                   <StyledDescriptionListTerm>Gravity</StyledDescriptionListTerm>
                   <StyledDescriptionListDescription>
                     {service.payload.gravity}
                   </StyledDescriptionListDescription>
                 </StyledDescriptionWrapper>
-                <StyledDescriptionWrapper>
+              <StyledDescriptionWrapper>
                   <StyledDescriptionListTerm>
                     Population
                   </StyledDescriptionListTerm>
@@ -71,13 +68,12 @@ const Planet: React.FC<Props> = ({ url, onClose }) => {
                     {service.payload.population}
                   </StyledDescriptionListDescription>
                 </StyledDescriptionWrapper>
-              </StyledDescriptionList>
-            </StyledCardWrapper>
-          </StyledCard>
-        </>
+            </StyledDescriptionList>
+          </StyledCardWrapper>
+        </StyledCard>
       )}
 
-      {service.status === "error" && (
+      {service.status === 'error' && (
         <div>
           Error, something weird happened with the starship.
         </div>

@@ -21,7 +21,7 @@ const handleClick = () => setClick(!click)
       </MenuLabel>
       <NavBackground clicked={click}>&nbsp;</NavBackground>
 
-      <Navigation clicked={click}>
+         <Navigation clicked={click}>
         <List>
           <li>
             <ItemLink onClick={handleClick} to="/">

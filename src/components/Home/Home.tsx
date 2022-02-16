@@ -1,30 +1,28 @@
-import {
-    HeroContainer,
-    HeroContent,
-    HeroContentText,
-    HeroTitle,
-    HeroTitleText,
-    HeroSubTitle,
-    HeroText,
-    HeroBtn,
 
+import React from 'react';
+import {
+  HeroContainer,
+  HeroContent,
+  HeroContentText,
+  HeroTitle,
+  HeroTitleText,
+  HeroSubTitle,
 } from './styles';
 
-
-const Home = () => {
-    return( <div>
-    <HeroContainer>
-        
+function Home() {
+  return (
+    <div>
+      <HeroContainer>
         <HeroContent>
-            <HeroContentText>
-                 <HeroTitle>
-                     <HeroTitleText>Welcome User</HeroTitleText>
-                 </HeroTitle>
-                 <HeroSubTitle>To view the website page please click the menu</HeroSubTitle>
-            </HeroContentText>
+          <HeroContentText>
+            <HeroTitle>
+              <HeroTitleText>Welcome User</HeroTitleText>
+            </HeroTitle>
+            <HeroSubTitle>To view the website page please click the menu</HeroSubTitle>
+          </HeroContentText>
         </HeroContent>
-    </HeroContainer>
- </div>
-    )
+      </HeroContainer>
+    </div>
+  );
 }
 export default Home;
