@@ -1,3 +1,6 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-shadow */
+/* eslint-disable react/function-component-definition */
 import React from 'react';
 import {
   Header,
@@ -51,7 +54,7 @@ const Planets: React.FC<{}> = () => {
                   <h3>{Planet.name}</h3>
                   <StyledSubHeaderParagraph>
                     Diameter:
-{' '}
+                    {' '}
                     <b>{Planet.diameter}</b>
                   </StyledSubHeaderParagraph>
                   <button onClick={() => setUrl(Planet.url)} key={Planet.url}>

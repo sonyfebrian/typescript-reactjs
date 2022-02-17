@@ -33,6 +33,11 @@ const handleClick = () => setClick(!click)
               List Planet
             </ItemLink>
           </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/detail-planet">
+              Detail Planet
+            </ItemLink>
+          </li>
         </List>
       </Navigation>     
     </>

@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/function-component-definition */
 import React from 'react';
 import PlanetUrlService from '../../services/PlanetsUrlService';
 import Loader from '../Loader';
@@ -32,42 +36,42 @@ const Planet: React.FC<Props> = ({ url, onClose }) => {
             <StyledDescriptionList>
               <StyledDescriptionWrapper>
                 <StyledDescriptionListTerm>
-                    Diameter
-                  </StyledDescriptionListTerm>
+                  Diameter
+                </StyledDescriptionListTerm>
                 <StyledDescriptionListDescription>
-                    {service.payload.diameter}
-                  </StyledDescriptionListDescription>
+                  {service.payload.diameter}
+                </StyledDescriptionListDescription>
               </StyledDescriptionWrapper>
               <StyledDescriptionWrapper>
-                  <StyledDescriptionListTerm>
+                <StyledDescriptionListTerm>
                     Rotation Period
-                  </StyledDescriptionListTerm>
-                  <StyledDescriptionListDescription>
+                </StyledDescriptionListTerm>
+                <StyledDescriptionListDescription>
                     {service.payload.rotation_period}
-                  </StyledDescriptionListDescription>
-                </StyledDescriptionWrapper>
+                </StyledDescriptionListDescription>
+              </StyledDescriptionWrapper>
               <StyledDescriptionWrapper>
-                  <StyledDescriptionListTerm>
+                <StyledDescriptionListTerm>
                     Orbital Period
-                  </StyledDescriptionListTerm>
-                  <StyledDescriptionListDescription>
+                </StyledDescriptionListTerm>
+                <StyledDescriptionListDescription>
                     {service.payload.orbital_period}
-                  </StyledDescriptionListDescription>
-                </StyledDescriptionWrapper>
+                </StyledDescriptionListDescription>
+              </StyledDescriptionWrapper>
               <StyledDescriptionWrapper>
-                  <StyledDescriptionListTerm>Gravity</StyledDescriptionListTerm>
-                  <StyledDescriptionListDescription>
+                <StyledDescriptionListTerm>Gravity</StyledDescriptionListTerm>
+                <StyledDescriptionListDescription>
                     {service.payload.gravity}
-                  </StyledDescriptionListDescription>
-                </StyledDescriptionWrapper>
+                </StyledDescriptionListDescription>
+              </StyledDescriptionWrapper>
               <StyledDescriptionWrapper>
-                  <StyledDescriptionListTerm>
+                <StyledDescriptionListTerm>
                     Population
-                  </StyledDescriptionListTerm>
-                  <StyledDescriptionListDescription>
+                </StyledDescriptionListTerm>
+                <StyledDescriptionListDescription>
                     {service.payload.population}
-                  </StyledDescriptionListDescription>
-                </StyledDescriptionWrapper>
+                </StyledDescriptionListDescription>
+              </StyledDescriptionWrapper>
             </StyledDescriptionList>
           </StyledCardWrapper>
         </StyledCard>

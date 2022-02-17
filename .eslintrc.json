@@ -4,7 +4,7 @@
     "es2021": true
   },
 
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": ["plugin:react/recommended", "airbnb", "eslint:recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,7 +18,7 @@
       "typescript": {}
     }
   },
-  "plugins": ["react", "@typescript-eslint", "react/jsx-runtime"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
@@ -53,6 +53,7 @@
         ]
       }
     ],
+    
     "react/jsx-indent": ["error", 2]
   }
 }
