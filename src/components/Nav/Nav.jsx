@@ -1,24 +1,24 @@
-import React,{useState} from "react";
-import { Link } from "react-router-dom"
+/* eslint-disable react/jsx-indent */
+/* eslint-disable indent */
+import React, { useState } from 'react';
 import {
-    MenuLabel,
-    Icon,
+  MenuLabel,
+  Icon,
     NavBackground,
     Navigation,
     List,
-    ItemLink
-  } from "./styles";
+    ItemLink,
+  } from './styles';
 
-
-export default function Nav () {
+export default function Nav() {
     const [click, setClick] = useState(false);
-const handleClick = () => setClick(!click)
+const handleClick = () => setClick(!click);
   return (
-    
+
        <>
        <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
        <Icon>&nbsp;</Icon>
-      </MenuLabel>
+       </MenuLabel>
       <NavBackground clicked={click}>&nbsp;</NavBackground>
 
          <Navigation clicked={click}>
@@ -39,7 +39,7 @@ const handleClick = () => setClick(!click)
             </ItemLink>
           </li>
         </List>
-      </Navigation>     
-    </>
-  )
+         </Navigation>
+       </>
+  );
 }
